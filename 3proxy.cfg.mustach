@@ -33,7 +33,7 @@ allow {{ auth.login }}{{#auth.extra_accounts.*}},{{ * }}{{/auth.extra_accounts.*
 {{extra_config}}
 {{/extra_config=}}
 
-proxy -a -p{{ ports.proxy }}
-socks -a -p{{ ports.socks }}
+proxy -a -64 -p{{ ports.proxy }}
+socks -a -64 -p{{ ports.socks }}
 
 flush
